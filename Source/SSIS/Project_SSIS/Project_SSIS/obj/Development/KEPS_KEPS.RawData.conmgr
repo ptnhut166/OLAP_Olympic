@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="KEPS_KEPS.RawData"
+  DTS:DTSID="{1FE7A462-7D30-4242-8AB1-C24B9C4D6D79}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=KEPS\KEPS;Initial Catalog=RawData;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Project_SSIS-{1FE7A462-7D30-4242-8AB1-C24B9C4D6D79}KEPS\KEPS.RawData;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

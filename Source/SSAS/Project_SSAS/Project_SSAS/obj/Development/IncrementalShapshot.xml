@@ -1,0 +1,103 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>Project_SSAS</Database>
+    <Server>KEPS\KEPS</Server>
+    <ConnectionString>Data Source=KEPS\KEPS;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>Default</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>TGBwTTbgmFaboN9lNd7oBG6m7vk=5/8/2024 2:27:46 AM5/8/2024 1:33:26 AM</TimeStamp>
+        <ID>
+          <String>Data Warehouse</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>Wvdh11T1tDZTl1GX6OHbRGLEdVQ=5/8/2024 1:35:58 AM5/8/2024 1:35:58 AM</TimeStamp>
+        <ID>
+          <String>Data Warehouse</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>0a9mtHKLN+AzdnMKA13cCVy0fZk=5/8/2024 1:39:07 AM5/8/2024 1:39:07 AM</TimeStamp>
+        <ID>
+          <String>Dim Athlete</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>Sd5J32VDhuZvlplvriN38TfhwYs=5/8/2024 1:39:18 AM5/8/2024 1:39:18 AM</TimeStamp>
+        <ID>
+          <String>Dim Competition</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>31qehQXfHapTM9QoRqovKNwAIDo=5/8/2024 1:39:33 AM5/8/2024 1:39:33 AM</TimeStamp>
+        <ID>
+          <String>Dim Country</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>R1+moOv+Js84w74YKaWfBzF0AyA=5/8/2024 1:39:51 AM5/8/2024 1:39:51 AM</TimeStamp>
+        <ID>
+          <String>Dim Game</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>Ccp7bPhvZhiGi6l9Fv5ER7WZNvc=5/8/2024 1:40:08 AM5/8/2024 1:40:08 AM</TimeStamp>
+        <ID>
+          <String>Dim Result</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>w2KzvoOi87+9wFKCfOYdmlPEDl4=5/8/2024 2:14:15 AM5/8/2024 1:40:28 AM</TimeStamp>
+        <ID>
+          <String>Dim Time</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>VsGRNvurCT1DBDsc8PBKfoLKuas=5/8/2024 2:05:36 AM5/8/2024 2:05:36 AM</TimeStamp>
+        <ID>
+          <String>Fact Olympic</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>/jgiKTgs5liI0W5qFBSu2p5kon8=5/13/2024 10:37:14 AM5/8/2024 1:41:27 AMa36ve9yNFhS5l6OFlCnfEhZeLc8=5/8/2024 1:41:27 AM5/8/2024 1:41:27 AM</TimeStamp>
+        <ID>
+          <String>Data Warehouse</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>whsFuG2FGkyPf+OnsIO7+OIbksg=5/7/2024 6:41:08 AM5/7/2024 6:41:08 AM</TimeStamp>
+      <ID>
+        <String>Project_SSAS</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2024-05-13T03:37:21.046667Z</LastDeployed>
+</DeploymentSnapshot>

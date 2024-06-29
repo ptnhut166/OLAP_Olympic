@@ -1,0 +1,72 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\4thYear\\2nd Semester\\OLAP\\Project_Fixed\\SSRS\\Project_SSRS\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{068E1BD3-D307-4EEA-95D2-2DEAB5D392AA}|Project_SSRS\\Project_SSRS.rptproj|D:\\4thYear\\2nd Semester\\OLAP\\Project_Fixed\\SSRS\\Project_SSRS\\Project_SSRS\\Report3.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}",
+      "RelativeMoniker": "D:0:0:{068E1BD3-D307-4EEA-95D2-2DEAB5D392AA}|Project_SSRS\\Project_SSRS.rptproj|solutionrelative:Project_SSRS\\Report3.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{068E1BD3-D307-4EEA-95D2-2DEAB5D392AA}|Project_SSRS\\Project_SSRS.rptproj|D:\\4thYear\\2nd Semester\\OLAP\\Project_Fixed\\SSRS\\Project_SSRS\\Project_SSRS\\Report2.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}",
+      "RelativeMoniker": "D:0:0:{068E1BD3-D307-4EEA-95D2-2DEAB5D392AA}|Project_SSRS\\Project_SSRS.rptproj|solutionrelative:Project_SSRS\\Report2.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{068E1BD3-D307-4EEA-95D2-2DEAB5D392AA}|Project_SSRS\\Project_SSRS.rptproj|D:\\4thYear\\2nd Semester\\OLAP\\Project_Fixed\\SSRS\\Project_SSRS\\Project_SSRS\\Report1.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}",
+      "RelativeMoniker": "D:0:0:{068E1BD3-D307-4EEA-95D2-2DEAB5D392AA}|Project_SSRS\\Project_SSRS.rptproj|solutionrelative:Project_SSRS\\Report1.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a83394e3-39c2-4678-a3c8-364b69d78fd3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Report3.rdl [Design]",
+              "DocumentMoniker": "D:\\4thYear\\2nd Semester\\OLAP\\Project_Fixed\\SSRS\\Project_SSRS\\Project_SSRS\\Report3.rdl",
+              "RelativeDocumentMoniker": "Project_SSRS\\Report3.rdl",
+              "ToolTip": "D:\\4thYear\\2nd Semester\\OLAP\\Project_Fixed\\SSRS\\Project_SSRS\\Project_SSRS\\Report3.rdl [Design]",
+              "RelativeToolTip": "Project_SSRS\\Report3.rdl [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-05-16T14:07:08.946Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Report2.rdl [Design]",
+              "DocumentMoniker": "D:\\4thYear\\2nd Semester\\OLAP\\Project_Fixed\\SSRS\\Project_SSRS\\Project_SSRS\\Report2.rdl",
+              "RelativeDocumentMoniker": "Project_SSRS\\Report2.rdl",
+              "ToolTip": "D:\\4thYear\\2nd Semester\\OLAP\\Project_Fixed\\SSRS\\Project_SSRS\\Project_SSRS\\Report2.rdl [Design]",
+              "RelativeToolTip": "Project_SSRS\\Report2.rdl [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-05-16T12:46:20.289Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Report1.rdl [Design]",
+              "DocumentMoniker": "D:\\4thYear\\2nd Semester\\OLAP\\Project_Fixed\\SSRS\\Project_SSRS\\Project_SSRS\\Report1.rdl",
+              "RelativeDocumentMoniker": "Project_SSRS\\Report1.rdl",
+              "ToolTip": "D:\\4thYear\\2nd Semester\\OLAP\\Project_Fixed\\SSRS\\Project_SSRS\\Project_SSRS\\Report1.rdl [Design]",
+              "RelativeToolTip": "Project_SSRS\\Report1.rdl [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-05-16T03:31:04.569Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

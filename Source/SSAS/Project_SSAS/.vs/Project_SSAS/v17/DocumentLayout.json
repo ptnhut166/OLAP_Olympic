@@ -1,0 +1,40 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\4thYear\\2nd Semester\\OLAP\\Project_Fixed\\SSAS\\Project_SSAS\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AA9410A4-3BC6-4AC1-8EBC-CDC161E50508}|Project_SSAS\\Project_SSAS.dwproj|D:\\4thYear\\2nd Semester\\OLAP\\Project_Fixed\\SSAS\\Project_SSAS\\Project_SSAS\\Data Warehouse.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{AA9410A4-3BC6-4AC1-8EBC-CDC161E50508}|Project_SSAS\\Project_SSAS.dwproj|solutionrelative:Project_SSAS\\Data Warehouse.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a83394e3-39c2-4678-a3c8-364b69d78fd3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Data Warehouse.cube [Design]",
+              "DocumentMoniker": "D:\\4thYear\\2nd Semester\\OLAP\\Project_Fixed\\SSAS\\Project_SSAS\\Project_SSAS\\Data Warehouse.cube",
+              "RelativeDocumentMoniker": "Project_SSAS\\Data Warehouse.cube",
+              "ToolTip": "D:\\4thYear\\2nd Semester\\OLAP\\Project_Fixed\\SSAS\\Project_SSAS\\Project_SSAS\\Data Warehouse.cube [Design]",
+              "RelativeToolTip": "Project_SSAS\\Data Warehouse.cube [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-05-13T03:37:32.633Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

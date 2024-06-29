@@ -1,0 +1,111 @@
+﻿--Câu 1: Liệt kê top 10 vận động viên đạt huy chương vàng nhất, sắp xếp theo thứ tự giảm dần.
+WITH MEMBER [Measures].[Số lượng huy chương vàng] AS[Measures].[Fact Olympic Count]
+SELECT [Measures].[Số lượng huy chương vàng] ON COLUMNS , 
+NON EMPTY TOPCOUNT([Dim Athlete].[Athlete Full Name].children,10,[Measures].[Fact Olympic Count]) ON ROWS
+FROM [Data Warehouse]
+WHERE [Dim Result].[Medal Type].[GOLD]
+
+--Câu 2: Liệt kê tất cả các vận động viên tham gia Olympic từ 3 lần trở lên, sắp theo theo thứ tự tăng dần
+WITH MEMBER [Measures].[Số lần tham gia] AS [Measures].[Fact Olympic Count]
+SELECT [Measures].[Số lần tham gia] ON COLUMNS , 
+NON EMPTY [Dim Athlete].[Athlete Full Name].CHILDREN
+HAVING [Measures].[Số lần tham gia] >= 3 ON ROWS
+FROM [Data Warehouse]
+
+--Câu 3: Liệt kê 10 môn thi đấu có số lượng huy chương đồng nhiều nhất trong kỳ thế vận hội Tokyo 2020.
+SELECT {[Measures].[Fact Olympic Count]} ON COLUMNS,
+{TopCount( 
+{[Dim Competition].[Discipline Title].CHILDREN }
+,10
+,[Measures].[Fact Olympic Count]
+)} ON ROWS
+FROM [Data Warehouse]
+WHERE ({[Dim Result].[Medal Type].&[BRONZE]} * {[Dim Game].[Game Name].&[Tokyo 1964]})
+
+--Câu 4: Vận động viên France dành được nhiều huy chương bạc nhất
+WITH MEMBER [Measures].[Số lượng huy chương bạc] AS[Measures].[Fact Olympic Count]
+SELECT
+ {[Measures].[Số lượng huy chương bạc]} ON COLUMNS,
+ NON EMPTY TopCount([Dim Athlete].[Athlete Full Name].children,1,[Measures].[Fact Olympic Count]) ON ROWS
+FROM [Data Warehouse]
+WHERE ({[Dim Country].[Country Name].&[France]} * {[Dim Result].[Medal Type].&[SILVER]})
+
+--Câu 5: Quốc gia dành được nhiều huy vàng nhất từ năm 1980 đến năm 2000
+WITH MEMBER [Measures].[Số lượng huy chương vàng] AS [Measures].[Fact Olympic Count]
+SELECT
+ {[Measures].[Số lượng huy chương vàng]} ON COLUMNS,
+ TOPCOUNT([Dim Country].[Country Name].children,1,[Measures].[Fact Olympic Count]) ON ROWS
+FROM [Data Warehouse]
+WHERE ({[Dim Time].[Game Year].[1980] : [Dim Time].[Game Year].[2000]} * {[Dim Result].[Medal Type].&[GOLD]})
+
+--Câu 6: Thống kê số lượng vận động viên của các quốc gia tham gia thi đấu môn Ski Jumping trong thế vận hội Sochi 2014.
+WITH MEMBER [Measures].[Số lượng vận động viên] AS [Measures].[Fact Olympic Count]
+SELECT
+ {[Measures].[Số lượng vận động viên]} ON COLUMNS,
+ NON EMPTY {[Dim Country].[Country Name].Children } ON ROWS
+FROM [Data Warehouse]
+WHERE ({[Dim Competition].[Discipline Title].&[Ski Jumping]} * {[Dim Game].[Game Name].&[Sochi 2014]})
+
+--Câu 7: Quốc gia đạt số lượng huy chương bạc nhiều nhất thế vận hội London 2012.
+WITH MEMBER [Measures].[Số lượng huy chương bạc] AS [Measures].[Fact Olympic Count]
+SELECT
+ {[Measures].[Số lượng huy chương bạc]} ON COLUMNS,
+ NON EMPTY TOPCOUNT([Dim Country].[Country Name].children,1,[Measures].[Fact Olympic Count]) ON ROWS
+FROM [Data Warehouse]
+WHERE ({[Dim Game].[Game Name].&[London 2012]} * {[Dim Result].[Medal Type].&[SILVER]})
+
+--Câu 8: Liệt kê top 5 nội dung thi có số lượng vận động viên tham gia nhiều nhất trong kỳ thế vận hội Tokyo 2020.
+WITH MEMBER [Measures].[Số lượng VĐV tham gia] AS [Measures].[Fact Olympic Count]
+SELECT [Measures].[Số lượng VĐV tham gia] ON COLUMNS , 
+NON EMPTY TOPCOUNT( {[Dim Competition].[Discipline Title].children * [Dim Competition].[Event Title].children}, 5, [Measures].[Số lượng VĐV tham gia]) ON ROWS
+FROM [Data Warehouse]
+WHERE ({[Dim Game].[Game Name].&[Tokyo 2020]})
+
+--Câu 9: Thống kê số lượng vận động viên tham gia các nội dung thi đấu qua các kỳ Olympics đến nay của đội tuyển Việt Nam.
+WITH MEMBER [Measures].[Số lượng VĐV tham gia] AS [Measures].[Fact Olympic Count]
+SELECT [Measures].[Số lượng VĐV tham gia] ON COLUMNS , 
+NON EMPTY ({[Dim Game].[Game Name].CHILDREN * [Dim Competition].[Discipline Title].CHILDREN * [Dim Competition].[Event Title].children}) ON ROWS
+FROM [Data Warehouse]
+WHERE ({[Dim Country].[Country Name].&[Vietnam]})
+
+--Câu 10: Liệt kê số lượng chi tiết từng huy chương của Pháp theo từng kỳ Olympics.
+WITH MEMBER [Measures].[Số huy chương vàng] AS [Measures].[Fact Olympic Count]
+SELECT [Measures].[Số huy chương vàng] ON COLUMNS,
+NON EMPTY {[Dim Game].[Game Name].Children } ON ROWS
+FROM [Data Warehouse]
+WHERE ( [Dim Country].[Country Name].&[France] )
+
+--Câu 11: Với mỗi quốc gia đưa ra 3 môn thi đấu có nhiều vận động viên tham gia nhiều nhất từ trước đến nay
+SELECT {[Measures].[Fact Olympic Count]} ON COLUMNS,
+{GENERATE(
+[Dim Country].[Country Name].CHILDREN,
+TopCount( 
+{[Dim Country].[Country Name].CURRENTMEMBER * [Dim Competition].[Discipline Title].Children},3,[Measures].[Fact Olympic Count]))} ON ROWS
+FROM [Data Warehouse]
+
+--Câu 12: Các vận động viên bị trùng hạng tư của nước United States of America
+WITH MEMBER [Measures].[Số lần trùng hạng 4] AS [Measures].[Fact Olympic Count]
+SELECT [Measures].[Số lần trùng hạng 4] ON COLUMNS,
+NON EMPTY {[Dim Athlete].[Athlete Full Name].Children } ON ROWS
+FROM [Data Warehouse]
+WHERE ([Dim Country].[Country Name].&[United States of America], [Dim Result].[Rank Equal].&[True], [Dim Result].[Rank Position].&[4] )
+
+--Câu 13: Tìm vận động viên giành được nhiều huy chương vàng nhất Olympic Beijing 2008
+WITH MEMBER [Measures].[Số HCV] AS [Measures].[Fact Olympic Count]
+SELECT [Measures].[Số HCV] ON COLUMNS , 
+NON EMPTY TOPCOUNT( {[Dim Athlete].[Athlete Full Name].children}, 1, [Measures].[Số HCV]) ON ROWS
+FROM [Data Warehouse]
+WHERE ([Dim Result].[Medal Type].&[GOLD], [Dim Game].[Game Name].&[Beijing 2008])
+
+--Câu 14: Kì Olympic với nhiều vận động viên tham gia nhất
+WITH MEMBER [Measures].[Số lượng VĐV tham gia] AS [Measures].[Fact Olympic Count]
+SELECT [Measures].[Số lượng VĐV tham gia] ON COLUMNS , 
+NON EMPTY TOPCOUNT( {[Dim Game].[Game Name].children}, 1, [Measures].[Số lượng VĐV tham gia]) ON ROWS
+FROM [Data Warehouse]
+
+--Câu 15: Top 10 các môn thi có số lượng vận động viên tham gia nhiều nhất với địa điểm tổ chức Olympic nằm ở quốc gia Great Britain
+WITH MEMBER [Measures].[Số lượng VĐV tham gia] AS [Measures].[Fact Olympic Count]
+SELECT [Measures].[Số lượng VĐV tham gia] ON COLUMNS , 
+NON EMPTY TOPCOUNT( {[Dim Competition].[Discipline Title].children}, 10, [Measures].[Số lượng VĐV tham gia]) ON ROWS
+FROM [Data Warehouse]
+WHERE ( [Dim Game].[Game Location].&[Great Britain] )
